@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/garyeung/frontendmentor_landing-page)
-- Live Site URL: [Live](https://garyeung.github.io/frontendmentor_landing-page)
+- Live Site URL: [Live](https://frontendmentor-landing-page-lilac.vercel.app/)
 
 ## My process
 
