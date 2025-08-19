@@ -1,0 +1,33 @@
+import './Product.less';
+
+function Product({creationsPropsList}:{creationsPropsList: creationProps[]}){
+    const creations = creationsPropsList.map((item) => {
+        return <Creation {...item}/>
+    })
+
+    return(
+        <section className="product">
+            <h2 className="product__title">our creations</h2>
+            <div className="product__creations">{creations}</div>
+            <a className="product__button" href="#">see all</a>
+        </section>
+    );
+}
+
+export interface creationProps {
+    creationURL: string, 
+    creationCaption: string
+};
+
+function Creation({creationURL, creationCaption}: creationProps){
+    return (
+        <a href="#" className="creation">
+            <img className="creation__img" src={creationURL} alt={creationCaption}/>
+                <span className="creation__caption">{creationCaption}</span>
+        </a>
+    );
+}
+
+
+
+export default Product;

@@ -1,0 +1,77 @@
+.footer {
+  margin-top: @pe1*20;
+  background: @black;
+  padding: 15% 5%;
+  text-align: center;
+  font-family: 'Alata', serif;
+
+
+.logo {
+  max-width: 50%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  width: inherit;
+}
+.nav-li {
+  list-style: none;
+  margin: 20px;
+}
+
+.nav-li-a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  margin: 20px;
+    margin-top: 20px;
+  margin-top: 40px;
+}
+
+
+.copyright {
+    color: @very-dark-gray;
+}
+
+}
+
+  
+@media screen and (min-width: @mobile-width) {
+ .footer {
+  margin-top: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 50px;
+  grid-template-areas: "logo contact" "nav copyright";
+  padding: 5% 10%;
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  grid-area: logo;
+}
+.manu-board {
+  grid-area: nav;
+}
+.contact {
+  grid-area: contact;
+  margin: 0;
+  justify-content: flex-end;
+}
+.copyright {
+  grid-area: copyright;
+  text-align: right;
+} 
+.nav-li{
+  margin: 0;
+}
+}
+}
