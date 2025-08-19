@@ -1,27 +1,73 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Loopstudios landing page solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Expanding the ESLint configuration
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Users should be able to:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+
+### Screenshot
+
+![Desktop](./Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png)
+![Mobile](./Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png)
+![Menu](./Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png)
+
+
+### Links
+
+- Solution URL: [Solution](https://github.com/garyeung/frontendmentor_landing-page)
+- Live Site URL: [Live](https://garyeung.github.io/frontendmentor_landing-page)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Less](https://lesscss.org/) - For styles
+- [Vite](https://vitejs.dev/)  - For development and building 
+
+
+### What I learned
+This is my third project in Frontend Mentor.
+This time I used React and Vite for the development.
+I realised why we need a framework to develop web frontend now.
+Dividing a website into several components is an easy way to organise it and it make each component can be reused. We don't need to rewrite a whole page instead of fixing a small part of the corresponding component and don't worry about affecting the rest of the page.
+
+
+### Continued development
+Better organise my css by using frameworks like TailwindCSS or CSS Modules.  
+Break down the role and function of each component.
+
+
+### Useful resources
+
+## Author
+
+
+## Acknowledgments
