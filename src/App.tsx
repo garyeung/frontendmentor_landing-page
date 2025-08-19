@@ -6,12 +6,11 @@ import Menu from './Header/Menu';
 import Intro, {IntroProps} from './Intro/Intro';
 import Product, { Creation } from './Product/Product';
 import Footer from './Footer/Footer';
-import React from 'react';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const headTitle = <h1 className='header-title'>{datas.headerTitle}</h1>;
-  let mobileWidth = 650;  
+  const mobileWidth = 650;  
 
   const headMenu:HeaderPros = {
     windowWidth: windowWidth,

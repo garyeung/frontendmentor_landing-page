@@ -1,4 +1,3 @@
-import React from "react";
 import { logoUrl } from "../datas";
 function Logo(){
     return(

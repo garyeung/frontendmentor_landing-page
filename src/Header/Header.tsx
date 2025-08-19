@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.less';
 import Logo from './Logo';
 import Menu from './Menu';
@@ -9,8 +8,8 @@ export interface HeaderPros{
   windowWidth: number, 
   button:string, 
   hName:string, 
-  element: JSX.Element,
-  selectUrl: Function
+  element: JSX.Element, 
+  selectUrl: (mobUrl: string, DesUrl: string, winWidth?: number, mobiWidth?: number) => string
 }
 
 
@@ -22,7 +21,7 @@ function bg(hName: string, windowWidth:number){
   }
   else{
     return {backgroundImage: `url(${selectUrl(bgMobUrl, bgDesUrl, windowWidth)})`}
-  };
+  }
 }
     return(
         <>

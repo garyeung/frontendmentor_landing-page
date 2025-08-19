@@ -1,6 +1,7 @@
 import React from 'react';
 import {navList} from '../datas';
 const navLis: string[] = navList.split(" ");
+// eslint-disable-next-line react-refresh/only-export-components
 export const navItems = navLis.map((li) => {
     return (<NavItem item={li}/>)
 })

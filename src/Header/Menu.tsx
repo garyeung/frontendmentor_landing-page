@@ -1,4 +1,3 @@
-import React from "react";
 import { navItems } from "./Nav";
 
 function Menu(){

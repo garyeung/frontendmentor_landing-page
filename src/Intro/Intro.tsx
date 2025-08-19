@@ -1,4 +1,3 @@
-import React from 'react';
 import './Intro.less' ;
 
 export interface IntroProps {

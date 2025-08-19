@@ -1,4 +1,3 @@
-import { ReactEventHandler } from 'react';
 import './Product.less';
 import React from 'react';
 
@@ -22,7 +21,7 @@ function Product({creations}:{creations: JSX.Element[]}){
 export interface creationProps {
     creationURL: string, 
     creationCaption: string
-};
+}
 
 export function Creation({creationURL, creationCaption}: creationProps){
     const handleCreation = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{
