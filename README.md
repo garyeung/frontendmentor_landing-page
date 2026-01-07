@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png)
-![Mobile](./Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png)
-![Menu](./Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png)
+![Desktop](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png)
+![Mobile](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png)
+![Menu](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png)
 
 
 ### Links
