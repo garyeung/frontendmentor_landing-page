@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,6 +13,12 @@ export default defineConfig({
         javascriptEnabled: true,
         additionalData: `@import url("src/main.less");`
       },
+    },
+  },
+  base: "",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src")
     },
   },
 })
