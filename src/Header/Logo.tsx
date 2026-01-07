@@ -1,8 +1,8 @@
-import { logoUrl } from "../datas";
+import  IconLogo  from "@/assets/logos/logo.svg?react";
 function Logo(){
     return(
         <div className="logo-wrapper">
-          <img className="logo" src={logoUrl} alt="logo"/>
+          <IconLogo className="logo" title="logo"/>
         </div>
     )
 }
