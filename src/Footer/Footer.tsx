@@ -1,5 +1,5 @@
 import './Footer.less';
-import Logo from "../Header/Logo";
+import Logo from "../components/bases/Logo";
 import Menu from "../Header/Menu";
 import { socialMediaList } from "../datas"; 
 

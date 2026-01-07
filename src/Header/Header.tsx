@@ -1,5 +1,5 @@
 import './Header.less';
-import Logo from './Logo';
+import Logo from '../components/bases/Logo';
 import Menu from './Menu';
 import Nav from './Nav';
 import { bgDesUrl, bgMobUrl } from '../datas';
