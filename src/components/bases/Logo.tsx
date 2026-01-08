@@ -1,8 +1,10 @@
-import  IconLogo  from "@/assets/logos/logo.svg?react";
+import logo from "@/assets/logos/logo.svg";
+import "./Logo.less"
+
 function Logo(){
     return(
         <div className="logo-wrapper">
-          <IconLogo className="logo" title="logo"/>
+          <img src={logo} alt="logo" className="logo"/>
         </div>
     )
 }
