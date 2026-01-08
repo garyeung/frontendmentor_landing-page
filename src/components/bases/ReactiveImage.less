@@ -1,5 +1,21 @@
 
 
-.reactive-image {
+.reactive-image--mobile,.reactive-image--desktop {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+.reactive-image--desktop {
+    display: none;
+}
+
+@media screen and (min-width: @mobile-width){
+    .reactive-image--mobile {
+        display: none;
+    }
+    .reactive-image--desktop {
+        display: block;
+    }
+}
+    

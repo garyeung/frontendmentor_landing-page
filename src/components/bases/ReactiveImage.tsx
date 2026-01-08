@@ -1,4 +1,3 @@
-import useScreeSize from "@/hooks/useScreenSize";
 import "./ReactiveImage.less"
 
 interface Props {
@@ -8,10 +7,11 @@ interface Props {
 }
 
 const ReactiveImage = (props: Props) => {
-    const screenSize = useScreeSize();
-
     return (
-        <img alt={props.alt} src={screenSize.width > 768 ? props.desktopSrc : props.mobileSrc} className="reactive-image"/>
+        <>
+            <img src={props.mobileSrc} alt={props.alt} className="reactive-image--mobile" />
+            <img src={props.desktopSrc} alt={props.alt} className="reactive-image--desktop" />
+        </>
     )
 } 
 
