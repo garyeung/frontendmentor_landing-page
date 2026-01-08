@@ -28,7 +28,7 @@ const Hero = (props: Props) => {
                     alt={props.bgName}
                 />
             </div>
-            <div className="hero-body">
+            <div className="hero-content">
               <Logo/>
               {
                   screenSize.width > 768 ? <Nav/> : <Menu/>
