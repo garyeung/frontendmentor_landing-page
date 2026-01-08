@@ -14,7 +14,7 @@ const links =  routes.map ((route, index) => {
 const Nav = () => {
 
     return (
-        <nav className="nav-board">
+        <nav className="nav">
             <ul className="nav-list">
                 {links}
             </ul>
