@@ -1,11 +1,10 @@
 import Logo from "@/components/bases/Logo";
 import Menu from "@/components/bases/Menu";
 import Nav from "@/components/bases/Nav";
-import useScreeSize from "@/hooks/useScreenSize";
+import useScreenSize from "@/hooks/useScreenSize";
 import Caption from "../bases/Caption";
 import ReactiveImage from "../bases/ReactiveImage";
 import "./Hero.less";
-import { useRef } from "react";
 
 interface Props {
     bgDesktop: string,
@@ -13,14 +12,14 @@ interface Props {
     bgName: string,
     caption: string
 }
-const Hero = (props: Props) => {
-    const screenSize = useScreeSize();
 
-    const heroRef = useRef<HTMLDivElement>(null);
+const Hero = (props: Props) => {
+    const screenSize = useScreenSize();
+
     
 
     return (
-        <header className="hero" ref={heroRef}>
+        <header className="hero">
             <div className="hero-bg">
                 <ReactiveImage 
                     mobileSrc={props.bgMobile}
