@@ -29,11 +29,15 @@ const Hero = (props: Props) => {
                 />
             </div>
             <div className="hero-content">
-              <Logo/>
-              {
-                  screenSize.width > 768 ? <Nav/> : <Menu/>
-              }
-              <Caption text={props.caption}/>
+              <div className="hero-head">
+                <Logo/>
+                {
+                    screenSize.width > 768 ? <Nav/> : <Menu/>
+                }
+              </div>
+              <div className="hero-caption">
+                <Caption text={props.caption}/>
+              </div>
             </div>
         </header>
     )
