@@ -1,7 +1,6 @@
 import Logo from "@/components/bases/Logo";
 import Menu from "@/components/bases/Menu";
 import Nav from "@/components/bases/Nav";
-import useScreenSize from "@/hooks/useScreenSize";
 import Caption from "@/components/bases/Caption";
 import ReactiveImage from "@/components/bases/ReactiveImage";
 import "./Hero.less";
@@ -14,7 +13,6 @@ interface Props {
 }
 
 const Hero = (props: Props) => {
-    const screenSize = useScreenSize();
 
     
 
@@ -30,9 +28,8 @@ const Hero = (props: Props) => {
             <div className="hero-content">
               <div className="hero-head">
                 <Logo/>
-                {
-                    screenSize.width > 768 ? <Nav/> : <Menu/>
-                }
+                <Nav/>
+                <Menu/>
               </div>
               <div className="hero-caption">
                 <Caption text={props.caption}/>
