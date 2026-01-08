@@ -1,3 +1,4 @@
+
 .menu-board {
     position: fixed;
   width: 100%;
@@ -47,4 +48,10 @@
 
 .menu-board--open {
     transform: translateX(0);
+}
+
+@media screen and (min-width: @mobile-width) {
+    .menu {
+        display: none;
+    } 
 }
