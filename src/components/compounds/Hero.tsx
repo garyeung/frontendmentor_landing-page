@@ -2,8 +2,8 @@ import Logo from "@/components/bases/Logo";
 import Menu from "@/components/bases/Menu";
 import Nav from "@/components/bases/Nav";
 import useScreenSize from "@/hooks/useScreenSize";
-import Caption from "../bases/Caption";
-import ReactiveImage from "../bases/ReactiveImage";
+import Caption from "@/components/bases/Caption";
+import ReactiveImage from "@/components/bases/ReactiveImage";
 import "./Hero.less";
 
 interface Props {
