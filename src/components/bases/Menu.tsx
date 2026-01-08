@@ -29,7 +29,7 @@ const Menu = () => {
             <button className="menu-open" onClick={handleOpen}>
                 <IconHamburger/>
             </button>
-          <div className={`menu-board ${open&& "menu-board--open"}`}>
+          <div className={`menu-board ${open?"menu-board--open":""}`}>
              <div className="menu-head">
                 <Logo/>
                 <button className="menu-close" onClick={handleClose}>
