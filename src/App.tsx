@@ -1,52 +1,33 @@
 import { useEffect, useState } from 'react';
 import './App.less';
 import * as datas from './datas';
-import Intro, {IntroProps} from './Intro/Intro';
-import Product, { Creation } from './Product/Product';
 import Footer from './Footer/Footer';
 import Hero from './components/compounds/Hero';
+import Interactive from './components/compounds/Interactive';
+import Creations, { CreationsProps } from './components/compounds/Creations';
+import { fetchCreationsInfo} from './services/store';
+import { ICreationInfo } from '@/interfaces/creationInfo';
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const mobileWidth = 650;  
+  const [creationsInfo, setCreationsInfo] = useState<ICreationInfo[]>([]); // State for creations data
 
-
-  const introData: IntroProps = {
-    text: datas.introText,
-    title: datas.introTitle,
-    imgUrl: deskOrMobi(datas.introImgMobile, datas.introImgDesk)
-  }
-
+  // Fetch creations data when component mounts
   useEffect(() => {
-    const handleResize = () => {
-    setWindowWidth(window.innerWidth);}
+    const loadCreations = async () => {
+      const data = await fetchCreationsInfo();
+      setCreationsInfo(data);
+    };
+    loadCreations();
+  }, []); // Empty dependency array ensures this runs once on mount
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-
-  }, [windowWidth])
-
-  function deskOrMobi(mobUrl: string, DesUrl: string, winWidth=windowWidth, mobiWidth=mobileWidth ){
-    if(winWidth > mobiWidth){
-      return DesUrl;
-    }
-    return mobUrl
-  }
-
-  function mobiOrDesk(mobiUrl: string, winWidth=windowWidth, mobiWidth=mobileWidth){
-    if((winWidth > mobiWidth) && mobiUrl.includes("mobile")){
-      return mobiUrl.replace('mobile', 'desktop');
-    }
-    return mobiUrl;
-  }
-
-  const creations: JSX.Element[] = datas.creationsList.map((item) => {
-    return (<Creation creationCaption={item.title} creationURL={mobiOrDesk(item.url, windowWidth)}/>)
-    
-  })
+  const creationsProps: CreationsProps = {
+    creationsInfo: creationsInfo.map((creation) => ({
+      mobileImg: creation.pictures.mobile,
+      desktopImg: creation.pictures.desktop,
+      caption: creation.title,
+      path: "#", // simply demo
+    })),    
+  } 
 
   return (
     <>
@@ -56,8 +37,13 @@ function App() {
       bgName="hero"
       caption={datas.headerTitle}
     />
-    <Intro {...introData}/>
-    <Product creations={creations}/>
+    <Interactive 
+      mobileImg={datas.introImgMobile}
+      desktopImg={datas.introImgDesk}
+      title={datas.introTitle}
+      introduction={datas.introText}
+    />
+    <Creations creationsInfo={creationsProps.creationsInfo} /> {/* Pass creationsData as prop */}
     <Footer />
     </>
   )
