@@ -1,16 +1,19 @@
 import "./Creation.less"
 import ReactiveImage from "./ReactiveImage"
 
-interface Props {
+export interface CreationProps {
     mobileImg: string,
     desktopImg: string,
-    caption: string
+    caption: string,
+    path: string,
 }
 
-const Creation = ({ mobileImg, desktopImg, caption }: Props) => {
+const Creation = ({ mobileImg, desktopImg, caption,path }: CreationProps) => {
 
     return (
-            <button className="creation">
+            <a 
+            href={path}
+            className="creation">
                 <div className="creation-img-wrapper">
                   <ReactiveImage 
                     mobileSrc={mobileImg} 
@@ -22,7 +25,7 @@ const Creation = ({ mobileImg, desktopImg, caption }: Props) => {
               <div className="creation-text">
                   <span className="creation-caption">{caption}</span>
               </div>
-          </button>
+          </a>
     )
 }
 
