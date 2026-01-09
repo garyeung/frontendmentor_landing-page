@@ -4,11 +4,13 @@ import * as datas from './datas';
 import Footer from './Footer/Footer';
 import Hero from './components/compounds/Hero';
 import Interactive from './components/compounds/Interactive';
-import Creations from './components/compounds/Creations';
+import Creations, { CreationsProps } from './components/compounds/Creations';
+import { fetchCreationsInfo} from './services/store';
+import { ICreationInfo } from '@/interfaces/creationInfo';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [creationsInfo, setCreationsInfo] = useState<ICreationInfo[]>([]); // State for creations data
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,6 +24,23 @@ function App() {
 
   }, [windowWidth])
 
+  // Fetch creations data when component mounts
+  useEffect(() => {
+    const loadCreations = async () => {
+      const data = await fetchCreationsInfo();
+      setCreationsInfo(data);
+    };
+    loadCreations();
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  const creationsProps: CreationsProps = {
+    creationsInfo: creationsInfo.map((creation) => ({
+      mobileImg: creation.pictures.mobile,
+      desktopImg: creation.pictures.desktop,
+      caption: creation.title,
+      path: "#", // simply demo
+    })),    
+  } 
 
   return (
     <>
@@ -37,7 +56,7 @@ function App() {
       title={datas.introTitle}
       introduction={datas.introText}
     />
-    <Creations />
+    <Creations creationsInfo={creationsProps.creationsInfo} /> {/* Pass creationsData as prop */}
     <Footer />
     </>
   )
