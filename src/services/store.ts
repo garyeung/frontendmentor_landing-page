@@ -1,15 +1,6 @@
-interface creationInfo {
-    route: string
-    pictures: {
-        mobile: string,
-        desktop: string
-    },
-    id: string,
-    title: string
-}
+import { ICreationInfo } from "@/interfaces/creationInfo";
 
-
-const creations: creationInfo[] = [
+const creations: ICreationInfo[] = [
     {
         route: 'deep-earth',
         pictures: {
@@ -87,6 +78,10 @@ const creations: creationInfo[] = [
 ]
 
 
-export const fetchCreationsInfo = () => {
-    return creations;
+export const fetchCreationsInfo = (): Promise<ICreationInfo[]> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(creations);
+        }, 500); // Simulate network delay
+    });
 }
