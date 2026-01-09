@@ -1,21 +1,16 @@
 import { useEffect, useState } from 'react';
 import './App.less';
 import * as datas from './datas';
-import Intro, {IntroProps} from './Intro/Intro';
 import Product, { Creation } from './Product/Product';
 import Footer from './Footer/Footer';
 import Hero from './components/compounds/Hero';
+import Interactive from './components/compounds/Interactive';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const mobileWidth = 650;  
 
 
-  const introData: IntroProps = {
-    text: datas.introText,
-    title: datas.introTitle,
-    imgUrl: deskOrMobi(datas.introImgMobile, datas.introImgDesk)
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,12 +24,6 @@ function App() {
 
   }, [windowWidth])
 
-  function deskOrMobi(mobUrl: string, DesUrl: string, winWidth=windowWidth, mobiWidth=mobileWidth ){
-    if(winWidth > mobiWidth){
-      return DesUrl;
-    }
-    return mobUrl
-  }
 
   function mobiOrDesk(mobiUrl: string, winWidth=windowWidth, mobiWidth=mobileWidth){
     if((winWidth > mobiWidth) && mobiUrl.includes("mobile")){
@@ -56,7 +45,12 @@ function App() {
       bgName="hero"
       caption={datas.headerTitle}
     />
-    <Intro {...introData}/>
+    <Interactive 
+      mobileImg={datas.introImgMobile}
+      desktopImg={datas.introImgDesk}
+      title={datas.introTitle}
+      introduction={datas.introText}
+    />
     <Product creations={creations}/>
     <Footer />
     </>
