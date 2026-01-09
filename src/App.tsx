@@ -1,33 +1,15 @@
 import { useEffect, useState } from 'react';
 import './App.less';
-import Header, {HeaderPros}from './Header/Header';
 import * as datas from './datas';
-import Menu from './Header/Menu';
 import Intro, {IntroProps} from './Intro/Intro';
 import Product, { Creation } from './Product/Product';
 import Footer from './Footer/Footer';
+import Hero from './components/compounds/Hero';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const headTitle = <h1 className='header-title'>{datas.headerTitle}</h1>;
   const mobileWidth = 650;  
 
-  const headMenu:HeaderPros = {
-    windowWidth: windowWidth,
-    hName: 'header-web',
-    button: 'menu',
-    element: headTitle,
-    selectUrl: deskOrMobi
-
-
-  }
-  const headerOpen: HeaderPros = {
-    windowWidth: windowWidth,
-    hName: 'open',
-    button: 'close',
-    element: <Menu />,
-    selectUrl: deskOrMobi
-  }
 
   const introData: IntroProps = {
     text: datas.introText,
@@ -68,8 +50,12 @@ function App() {
 
   return (
     <>
-    <Header {...headMenu}></Header>
-    <Header {...headerOpen}></Header>
+    <Hero 
+      bgDesktop={datas.bgDesUrl}
+      bgMobile={datas.bgMobUrl}
+      bgName="hero"
+      caption={datas.headerTitle}
+    />
     <Intro {...introData}/>
     <Product creations={creations}/>
     <Footer />
