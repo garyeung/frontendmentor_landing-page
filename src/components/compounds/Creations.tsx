@@ -1,17 +1,20 @@
-import Creation from "@/components/bases/Creation"
+import Creation, { CreationProps } from "@/components/bases/Creation"
 import "./Creations.less"
-import { fetchCreationsInfo } from "@/services/store"
 
-const Creations = () => {
+export interface CreationsProps {
+    creationsInfo: CreationProps[]
+}
+const Creations = ({creationsInfo}:CreationsProps) => {
 
-    const creationsInfo = fetchCreationsInfo();
 
     const creationArr = creationsInfo.map((product,index) => {
         return (<Creation 
-            key={product.id+index}
-            mobileImg={product.pictures.mobile}
-            desktopImg={product.pictures.desktop}
-            caption={product.title}
+            key={product.caption+index}
+            mobileImg={product.mobileImg}
+            desktopImg={product.desktopImg}
+            caption={product.caption}
+            path={product.path}
+
            /> )
     }) 
     return (
