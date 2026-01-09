@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.less';
 import * as datas from './datas';
-import Product, { Creation } from './Product/Product';
 import Footer from './Footer/Footer';
 import Hero from './components/compounds/Hero';
 import Interactive from './components/compounds/Interactive';
+import Creations from './components/compounds/Creations';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const mobileWidth = 650;  
-
 
 
   useEffect(() => {
@@ -25,18 +23,6 @@ function App() {
   }, [windowWidth])
 
 
-  function mobiOrDesk(mobiUrl: string, winWidth=windowWidth, mobiWidth=mobileWidth){
-    if((winWidth > mobiWidth) && mobiUrl.includes("mobile")){
-      return mobiUrl.replace('mobile', 'desktop');
-    }
-    return mobiUrl;
-  }
-
-  const creations: JSX.Element[] = datas.creationsList.map((item) => {
-    return (<Creation creationCaption={item.title} creationURL={mobiOrDesk(item.url, windowWidth)}/>)
-    
-  })
-
   return (
     <>
     <Hero 
@@ -51,7 +37,7 @@ function App() {
       title={datas.introTitle}
       introduction={datas.introText}
     />
-    <Product creations={creations}/>
+    <Creations />
     <Footer />
     </>
   )
