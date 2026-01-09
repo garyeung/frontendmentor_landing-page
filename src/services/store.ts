@@ -82,6 +82,6 @@ export const fetchCreationsInfo = (): Promise<ICreationInfo[]> => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(creations);
-        }, 500); // Simulate network delay
+        }, 300); // Simulate network delay
     });
 }
