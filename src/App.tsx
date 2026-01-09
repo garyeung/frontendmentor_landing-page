@@ -9,20 +9,7 @@ import { fetchCreationsInfo} from './services/store';
 import { ICreationInfo } from '@/interfaces/creationInfo';
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [creationsInfo, setCreationsInfo] = useState<ICreationInfo[]>([]); // State for creations data
-
-  useEffect(() => {
-    const handleResize = () => {
-    setWindowWidth(window.innerWidth);}
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-
-  }, [windowWidth])
 
   // Fetch creations data when component mounts
   useEffect(() => {
