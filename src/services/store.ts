@@ -1,4 +1,5 @@
 import { ICreationInfo } from "@/interfaces/creationInfo";
+import ISocialMediaInfo from "@/interfaces/socialmediaInfo";
 
 const creations: ICreationInfo[] = [
     {
@@ -84,4 +85,36 @@ export const fetchCreationsInfo = (): Promise<ICreationInfo[]> => {
             resolve(creations);
         }, 300); // Simulate network delay
     });
+}
+
+const socialMedias: ISocialMediaInfo[] = [
+  {
+    icon: 'images/icon-facebook.svg',
+    name: 'facebook',
+    url: "#"
+  },
+  {
+    icon: 'images/icon-twitter.svg',
+    name: 'twitter',
+    url: "#"
+  },
+  {
+    icon: 'images/icon-pinterest.svg',
+    name: 'pinterest',
+    url: "#",
+  },
+  {
+    icon: 'images/icon-instagram.svg',
+    name: 'ig',
+    url: "#"
+  }
+] 
+
+export const fetchSocialMediasInfo = ():Promise<ISocialMediaInfo[]>=> {
+    return new Promise((resolve)=> {
+        setTimeout(() => {
+            resolve(socialMedias)
+        }, 300)
+    })
+
 }
