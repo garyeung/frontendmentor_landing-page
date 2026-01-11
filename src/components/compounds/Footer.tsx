@@ -1,7 +1,7 @@
-import Copyright from "../bases/Copyright"
-import Logo from "../bases/Logo"
-import Nav from "../bases/Nav"
-import Socialmedia, { SocialmediaProps } from "../bases/Socialmedia"
+import Copyright from "@/components/bases/Copyright"
+import Logo from "@/components/bases/Logo"
+import Nav from "@/components/bases/Nav"
+import Socialmedia, { SocialmediaProps } from "@/components/bases/Socialmedia"
 import "./Footer.less"
 
 interface Props {
