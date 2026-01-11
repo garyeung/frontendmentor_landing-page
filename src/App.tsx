@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.less';
 import * as datas from './datas';
-import Hero from './components/compounds/Hero';
-import Interactive from './components/compounds/Interactive';
-import Creations, { CreationsProps } from './components/compounds/Creations';
-import { fetchCreationsInfo, fetchSocialMediasInfo} from './services/store';
+import Hero from '@/components/compounds/Hero';
+import Interactive from '@/components/compounds/Interactive';
+import Creations, { CreationsProps } from '@/components/compounds/Creations';
+import { fetchCreationsInfo, fetchSocialMediasInfo} from '@/services/store';
 import { ICreationInfo } from '@/interfaces/creationInfo';
-import Footer from './components/compounds/Footer';
-import ISocialMediaInfo from './interfaces/socialmediaInfo';
+import Footer from '@/components/compounds/Footer';
+import ISocialMediaInfo from '@/interfaces/socialmediaInfo';
 
 function App() {
   const [creationsInfo, setCreationsInfo] = useState<ICreationInfo[]>([]); // State for creations data
