@@ -1,4 +1,6 @@
 import { ICreationInfo } from "@/interfaces/creationInfo";
+import IHeroInfo from "@/interfaces/heroInfo";
+import IInteractiveInfo from "@/interfaces/interactiveInfo";
 import ISocialMediaInfo from "@/interfaces/socialmediaInfo";
 
 const creations: ICreationInfo[] = [
@@ -117,4 +119,34 @@ export const fetchSocialMediasInfo = ():Promise<ISocialMediaInfo[]>=> {
         }, 300)
     })
 
+}
+
+const heroInfo: IHeroInfo = {
+    caption: 'Immersive experiences that deliver',
+    bgMobile: 'images/mobile/image-hero.jpg',
+    bgDesktop: 'images/desktop/image-hero.jpg'
+
+}
+
+export const fetchHeroInfo = (): Promise<IHeroInfo> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(heroInfo);
+        }, 300); // Simulate network delay
+    });
+}
+
+const interactiveInfo: IInteractiveInfo= {
+    pictureDesktop: 'images/desktop/image-interactive.jpg',
+    pictureMobile: 'images/mobile/image-interactive.jpg',
+    title: 'The leader in interactive VR',
+    text: 'Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.'
+}
+
+export const fetchInteractiveInfo = (): Promise<IInteractiveInfo> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(interactiveInfo);
+        }, 300); // Simulate network delay
+    });
 }
