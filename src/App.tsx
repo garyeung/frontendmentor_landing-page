@@ -1,15 +1,20 @@
 import { useEffect, useState } from 'react';
 import './App.less';
 import * as datas from './datas';
-import Footer from './Footer/Footer';
 import Hero from './components/compounds/Hero';
 import Interactive from './components/compounds/Interactive';
 import Creations, { CreationsProps } from './components/compounds/Creations';
-import { fetchCreationsInfo} from './services/store';
+import { fetchCreationsInfo, fetchSocialMediasInfo} from './services/store';
 import { ICreationInfo } from '@/interfaces/creationInfo';
+import Footer from './components/compounds/Footer';
+import ISocialMediaInfo from './interfaces/socialmediaInfo';
 
 function App() {
   const [creationsInfo, setCreationsInfo] = useState<ICreationInfo[]>([]); // State for creations data
+
+  const companyName = "Loopstudios";
+  const [socialmediasInfo, setSocialmediasInfo] = useState<ISocialMediaInfo[]>([]); // State for socialmedias data
+
 
   // Fetch creations data when component mounts
   useEffect(() => {
@@ -19,6 +24,15 @@ function App() {
     };
     loadCreations();
   }, []); // Empty dependency array ensures this runs once on mount
+
+  useEffect(() => {
+    const loadSocialMedias = async () => {
+      const data = await fetchSocialMediasInfo();
+      setSocialmediasInfo(data);
+    };
+    loadSocialMedias();
+
+  }, [])
 
   const creationsProps: CreationsProps = {
     creationsInfo: creationsInfo.map((creation) => ({
@@ -43,8 +57,8 @@ function App() {
       title={datas.introTitle}
       introduction={datas.introText}
     />
-    <Creations creationsInfo={creationsProps.creationsInfo} /> {/* Pass creationsData as prop */}
-    <Footer />
+    <Creations creationsInfo={creationsProps.creationsInfo} /> 
+    <Footer companyName={companyName} socialMedias={socialmediasInfo}/>
     </>
   )
 }
