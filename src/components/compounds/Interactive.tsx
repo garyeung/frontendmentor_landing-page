@@ -1,4 +1,4 @@
-import ReactiveImage from "../bases/ReactiveImage"
+import ReactiveImage from "@/components/bases/ReactiveImage"
 import "./Interactive.less"
 
 interface Props {

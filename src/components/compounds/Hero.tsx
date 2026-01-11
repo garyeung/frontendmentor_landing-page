@@ -28,8 +28,12 @@ const Hero = (props: Props) => {
             <div className="hero-content">
               <div className="hero-head">
                 <Logo/>
-                <Nav/>
-                <Menu/>
+                <div className="hero-nav">
+                  <Nav/>
+                </div>
+                <div className="hero-menu">
+                  <Menu/>
+                </div>
               </div>
               <div className="hero-caption">
                 <Caption text={props.caption}/>
