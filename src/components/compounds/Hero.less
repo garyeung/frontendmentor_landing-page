@@ -25,7 +25,7 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: 40px @mobile-space;
+    padding: 40px @mobile-space;
 }
 
 .hero-caption {
@@ -61,5 +61,28 @@
    .hero-overlay {
         background:rgba(0,0,0,0.4);
      
+   }
+
+   .hero .logo {
+      width: fit-content;
+   }
+
+   .hero .nav-list {
+    flex-flow: row;
+    gap: 34px;
+   }
+
+   .hero-head {
+        padding: 64px @desktop-space;
+   }
+   
+   .hero-caption {
+        max-width: 650px;
+        margin-top: 72px;
+        margin-left: @desktop-space;
+   }
+
+   .hero-content {
+        align-items: flex-start;
    }
 }
