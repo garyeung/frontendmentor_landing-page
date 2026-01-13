@@ -13,7 +13,7 @@ export default defineConfig({
         math: "always",
         relativeUrls: true,
         javascriptEnabled: true,
-        additionalData: `@import url("src/main.less");`
+        additionalData: `@import url("src/index.less");`
       },
     },
   },
