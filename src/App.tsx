@@ -26,12 +26,8 @@ function App() {
 
   const isLoading = creationsLoading || socialmediasLoading || heroLoading || interactiveLoading;
 
-  if (isLoading) {
-    return <div className='loading'>Loading...</div>;
-  }
-
   // Render the full component once all data is loaded
-  return (
+  return !isLoading && (
     <div className='container'>
       {heroInfo && (
         <Hero
