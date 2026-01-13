@@ -9,6 +9,7 @@
 
 .interactive-text {
   text-align: center;
+  user-select: none;
 }
 
 .interactive-title {
@@ -26,4 +27,43 @@
   color: @very-dark-gray; 
   line-height: 1.6;
   padding: 0 24px;
+}
+
+.interactive-container {
+  display: flex;
+  flex-flow: column;
+}
+
+
+@media screen and (min-width: @mobile-width) {
+  .interactive {
+    padding: @desktop-space;
+  }
+
+  .interactive-container {
+    flex-flow: row;
+    position: relative;
+  }
+  .interactive-text {
+    position: absolute;
+    background: @white;
+    text-align: left;
+    right: -5px;
+    max-width: 450px;
+    padding: 96px 0 0 96px;
+    bottom: 0;
+  }
+
+  .interactive-title {
+    font-size: 3.2rem;
+    margin-bottom: 32px;
+  }
+
+  .interactive-introduction {
+    padding: 0;
+  }
+
+  .interactive-img-wrapper {
+    margin-bottom: 0;
+  }
 }

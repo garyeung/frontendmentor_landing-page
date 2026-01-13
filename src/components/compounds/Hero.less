@@ -1,6 +1,7 @@
 .hero {
     position: relative;
     width: 100%;
+    display: flex;
 }
 
 .hero-content {
@@ -24,7 +25,7 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: 40px @mobile-space;
+    padding: 40px @mobile-space;
 }
 
 .hero-caption {
@@ -38,6 +39,15 @@
     display: none;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:initial;
+}
+
 
 @media screen and (min-width: @mobile-width) {
    .hero-nav {
@@ -46,5 +56,28 @@
 
    .hero-menu {
     display: none;
+   }
+
+   .hero-overlay {
+        background:rgba(0,0,0,0.4);
+     
+   }
+
+   .hero .logo {
+      width: fit-content;
+   }
+
+   .hero-head {
+        padding: 64px @desktop-space;
+   }
+   
+   .hero-caption {
+        max-width: 650px;
+        margin-top: 72px;
+        margin-left: @desktop-space;
+   }
+
+   .hero-content {
+        align-items: flex-start;
    }
 }

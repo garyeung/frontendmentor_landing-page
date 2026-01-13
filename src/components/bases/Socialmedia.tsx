@@ -1,3 +1,5 @@
+import "./Socialmedia.less"
+
 export interface SocialmediaProps {
     url: string,
     icon: string,

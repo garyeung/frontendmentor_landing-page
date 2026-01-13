@@ -42,3 +42,36 @@
     justify-content: center;
     flex-flow: row;
 }
+
+@media screen and (min-width: @mobile-width) {
+   .footer {
+      padding: 40px 165px;
+   }
+
+   .footer-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+  "logo socialmedia" 
+  "nav  copyright  ";
+    align-items: last baseline;
+    gap: 16px;
+   } 
+
+   .footer-logo {
+    justify-content: flex-start;
+    align-items: start;
+   }
+
+   .footer-socialmedia .socialmedia-list {
+    justify-content: flex-end;
+   }
+
+   .footer-nav {
+      padding: 0;
+   }
+
+   .footer-copyright p {
+      text-align: end;
+   }
+}

@@ -1,9 +1,17 @@
+.loading {
+    background-color: @white;
+    animation: pulse-bg 1.5s infinite;
 
+    .reactive-image--desktop, .reactive-image--mobile {
+        opacity: 0;
+    }
+}
 
 .reactive-image--mobile,.reactive-image--desktop {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .reactive-image--desktop {
@@ -17,5 +25,11 @@
     .reactive-image--desktop {
         display: block;
     }
+}
+
+@keyframes pulse-bg {
+    0% { background-color: #f0f0f0; }
+    50% { background-color: #e0e0e0; }
+    100% { background-color: #f0f0f0; }
 }
     

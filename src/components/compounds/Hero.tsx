@@ -18,6 +18,7 @@ const Hero = (props: Props) => {
 
     return (
         <header className="hero">
+            <div className="hero-overlay"></div>
             <div className="hero-bg">
                 <ReactiveImage 
                     mobileSrc={props.bgMobile}
