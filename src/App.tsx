@@ -28,7 +28,7 @@ function App() {
 
   // Render the full component once all data is loaded
   return !isLoading && (
-    <div className='container'>
+    <main className='container'>
       {heroInfo && (
         <Hero
           bgDesktop={heroInfo.bgDesktop}
@@ -47,7 +47,7 @@ function App() {
       )}
       <Creations creationsInfo={creationsProps.creationsInfo} />
       {socialmediasInfo && <Footer companyName={companyName} socialMedias={socialmediasInfo} />}
-    </div>
+    </main>
   )
 }
 
