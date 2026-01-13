@@ -41,15 +41,17 @@ function App() {
           caption={heroInfo.caption}
         />
       )}
-      {interactiveInfo && (
-        <Interactive
-          mobileImg={interactiveInfo.pictureMobile}
-          desktopImg={interactiveInfo.pictureDesktop}
-          title={interactiveInfo.title}
-          introduction={interactiveInfo.text}
-        />
-      )}
-      <Creations creationsInfo={creationsProps.creationsInfo} />
+      <main className="main-content">
+        {interactiveInfo && (
+          <Interactive
+            mobileImg={interactiveInfo.pictureMobile}
+            desktopImg={interactiveInfo.pictureDesktop}
+            title={interactiveInfo.title}
+            introduction={interactiveInfo.text}
+          />
+        )}
+        <Creations creationsInfo={creationsProps.creationsInfo} />
+      </main>
       {socialmediasInfo && <Footer companyName={companyName} socialMedias={socialmediasInfo} />}
     </div>
   )
