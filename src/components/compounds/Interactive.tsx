@@ -11,9 +11,9 @@ interface Props {
 const Interactive = ({mobileImg, desktopImg, title, introduction}: Props) => {
     return (
         <section className="interactive">
-          <div role="body" className="interactive-container">
+          <div className="interactive-container">
 
-            <div className="interactive-img-wrapper" role="banner">
+            <div className="interactive-img-wrapper" role="figure">
                 <ReactiveImage 
                  mobileSrc={mobileImg}
                  desktopSrc={desktopImg}
@@ -21,7 +21,7 @@ const Interactive = ({mobileImg, desktopImg, title, introduction}: Props) => {
                 />
             </div>
             
-            <div className="interactive-text" role="main">
+            <div className="interactive-text" >
               <h2 className="interactive-title">{title}</h2>
               <p className="interactive-introduction">
                 {introduction}
