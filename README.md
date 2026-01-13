@@ -89,9 +89,7 @@ The design of this project is based on the provided style guide.
 ## Screenshots
 
 <img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png" alt="desktop" height="300px"/>
-
 <img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png" alt="mobile" height="300px"/>
-
 <img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png" alt="menu" height="300px"/>
 
 ## License
