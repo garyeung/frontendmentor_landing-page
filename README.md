@@ -1,73 +1,101 @@
-# Frontend Mentor - Loopstudios landing page solution
+# Loopstudios Landing Page
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). This project is a responsive landing page built with React, Vite, and Less, showcasing a clean and modern design.
 
-## Table of contents
+[Live Site URL](https://frontendmentor-landing-page-lilac.vercel.app/)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+[Code Repo URL](https://github.com/garyeung/frontendmentor_landing-page)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## Features
 
-## Overview
+- **Responsive Design**: Adapts to different screen sizes, from mobile to desktop.
+- **Interactive Elements**: Hover states for all interactive elements.
+- **Component-Based Architecture**: Built with React components for better organization and reusability.
+- **Image Loading Effect**: A loading effect for images to improve user experience.
 
-### The challenge
+## Tech Stack
 
-Users should be able to:
+- **[React](https://reactjs.org/)**: A JavaScript library for building user interfaces.
+- **[Vite](https://vitejs.dev/)**: A fast build tool for modern web development.
+- **[Less](https://lesscss.org/)**: A CSS pre-processor for more maintainable and organized styles.
+- **[TypeScript](https://www.typescriptlang.org/)**: A typed superset of JavaScript that compiles to plain JavaScript.
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+## Installation
 
-### Screenshot
+To run this project locally, follow these steps:
 
-![Desktop](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png)
-![Mobile](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png)
-![Menu](./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png)
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/garyeung/frontendmentor_landing-page.git
+    cd frontendmentor_landing-page
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+    Or if you use `pnpm`:
+
+    ```bash
+    pnpm install
+    ```
+
+3.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    The application will be available at `http://localhost:5173`.
+
+## Usage
+
+Once the development server is running, you can open your browser to `http://localhost:5173` to see the application. The page is designed to be responsive, so you can test it on different screen sizes by resizing your browser window or using your browser's developer tools.
+
+## Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run lint`: Lints the source code.
+- `npm run preview`: Previews the production build locally.
+
+## Design and Styling
+
+The design of this project is based on the provided style guide.
+
+### Layout
+
+- **Mobile**: 375px
+- **Desktop**: 1440px
+
+### Colors
+
+- **White**: `hsl(0, 0%, 100%)`
+- **Black**: `hsl(0, 0%, 0%)`
+- **Dark Gray**: `hsl(0, 0%, 55%)`
+- **Very Dark Gray**: `hsl(0, 0%, 41%)`
+
+### Typography
+
+- **Body Copy**: 15px
+- **Fonts**:
+  - **Alata**: 400
+  - **Josefin Sans**: 300
 
 
-### Links
+## Screenshots
 
-- Solution URL: [Solution](https://github.com/garyeung/frontendmentor_landing-page)
-- Live Site URL: [Live](https://frontendmentor-landing-page-lilac.vercel.app/)
+<img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-desktop.png" alt="desktop" height="300px"/>
 
-## My process
+<img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-mobile.png" alt="mobile" height="300px"/>
 
-### Built with
+<img src="./public/screenshots/Frontend%20Mentor%20Loopstudios%20landing%20page-menu.png" alt="menu" height="300px"/>
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Less](https://lesscss.org/) - For styles
-- [Vite](https://vitejs.dev/)  - For development and building 
+## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### What I learned
-This is my third project in Frontend Mentor.
-This time I used React and Vite for the development.
-I realised why we need a framework to develop web frontend now.
-Dividing a website into several components is an easy way to organise it and it make each component can be reused. We don't need to rewrite a whole page instead of fixing a small part of the corresponding component and don't worry about affecting the rest of the page.
-
-
-### Continued development
-Better organise my css by using frameworks like TailwindCSS or CSS Modules.  
-Break down the role and function of each component.
-
-
-### Useful resources
-
-## Author
-
-
-## Acknowledgments
+---
