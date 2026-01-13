@@ -85,7 +85,7 @@ export const fetchCreationsInfo = (): Promise<ICreationInfo[]> => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(creations);
-        }, 300); // Simulate network delay
+        }, 10); // Simulate network delay
     });
 }
 
@@ -116,7 +116,7 @@ export const fetchSocialMediasInfo = ():Promise<ISocialMediaInfo[]>=> {
     return new Promise((resolve)=> {
         setTimeout(() => {
             resolve(socialMedias)
-        }, 300)
+        }, 10)
     })
 
 }
@@ -132,7 +132,7 @@ export const fetchHeroInfo = (): Promise<IHeroInfo> => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(heroInfo);
-        }, 300); // Simulate network delay
+        }, 10); // Simulate network delay
     });
 }
 
@@ -147,6 +147,6 @@ export const fetchInteractiveInfo = (): Promise<IInteractiveInfo> => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(interactiveInfo);
-        }, 300); // Simulate network delay
+        }, 10); // Simulate network delay
     });
 }

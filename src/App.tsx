@@ -8,10 +8,10 @@ import useFetchData from './hooks/useFetchData';
 import { useMemo } from 'react';
 
 function App() {
-  const { data: creationsInfo } = useFetchData(fetchCreationsInfo);
-  const { data: socialmediasInfo } = useFetchData(fetchSocialMediasInfo);
-  const { data: heroInfo } = useFetchData(fetchHeroInfo);
-  const { data: interactiveInfo } = useFetchData(fetchInteractiveInfo);
+  const { data: creationsInfo, loading: creationsLoading } = useFetchData(fetchCreationsInfo);
+  const { data: socialmediasInfo, loading: socialmediasLoading } = useFetchData(fetchSocialMediasInfo);
+  const { data: heroInfo, loading: heroLoading } = useFetchData(fetchHeroInfo);
+  const { data: interactiveInfo, loading: interactiveLoading } = useFetchData(fetchInteractiveInfo);
 
   const companyName = "Loopstudios";
 
@@ -24,9 +24,15 @@ function App() {
     })) || [],
   }), [creationsInfo]);
 
+  const isLoading = creationsLoading || socialmediasLoading || heroLoading || interactiveLoading;
+
+  if (isLoading) {
+    return <div className='app-loading'>Loading...</div>;
+  }
+
   // Render the full component once all data is loaded
   return (
-    <div className='container' role='application'>
+    <div className='container'>
       {heroInfo && (
         <Hero
           bgDesktop={heroInfo.bgDesktop}
