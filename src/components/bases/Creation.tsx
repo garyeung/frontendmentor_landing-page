@@ -18,7 +18,7 @@ const Creation = ({ mobileImg, desktopImg, caption,path }: CreationProps) => {
                   <ReactiveImage 
                     mobileSrc={mobileImg} 
                     desktopSrc={desktopImg} 
-                    alt={caption}
+                    alt={""} // for a11y
                   />
                 <div className="creation-overlay"></div>
               </div>
